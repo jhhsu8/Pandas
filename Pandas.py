@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 
-df = pd.read_csv('/Users/johhsu/desktop/wt_change/weight_506_993_komp.csv')
+df = pd.read_csv('/Users/johhsu/desktop/wt_change/k2p2la/all_wts.csv')
 
 for i, group in df.groupby('Mouse'):
     sns_plot = sns.lmplot(x="Age", y="Weight", col="Mouse", data=group).set(xlim=(4,18),ylim=(15,40))
@@ -20,7 +20,7 @@ df.to_csv('/Users/johhsu/desktop/wt_change/k2p2la/wts_pctchange.csv')
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-df = pd.read_csv('/Users/johhsu/desktop/wt_change/all_wts.csv')
+df = pd.read_csv('/Users/johhsu/desktop/wt_change/k2p2la/all_wts.csv')
 
 def rsquared(df):
     x = df[['Age']]
