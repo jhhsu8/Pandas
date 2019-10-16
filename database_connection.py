@@ -1,3 +1,5 @@
+#Load a DataFrame from a MySQL database
+
 import mysql.connector
 import pandas as pd
 import numpy as np
@@ -10,7 +12,7 @@ cnx = mysql.connector.connect(
         database="database_name"
 )
 
-#SQL query
+#read SQL query
 df = pd.read_sql_query("""SELECT DISTINCT mouse_name,
                 datediff(insulins.datetime, mice.birth_date) / 7 AS mouse_age,
                 mice.genotype,
