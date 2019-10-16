@@ -15,7 +15,6 @@ df = df.sort_values(['Mouse','Age'])
 df['pct_ch'] = df.groupby(['Mouse'])['Weight'].pct_change()
 df.to_csv('/Users/johhsu/desktop/wt_change/k2p2la/wts_pctchange.csv')
 
-
 # calculate rsquared values
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -31,7 +30,6 @@ def rsquared(df):
     
 rq = df.groupby('Mouse').apply(rsquared)
 rq.to_csv('/Users/johhsu/desktop/csv/all_wts_rsquared.csv')
-
 
 # calculate age difference
 import pandas as pd
