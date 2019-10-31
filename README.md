@@ -1,1 +1,1 @@
-This repository contains sample Python programs used for data analysis.
+This repository contains Python programs used for data analysis.
